@@ -18,8 +18,8 @@ def get_mail():
     time.sleep(4)
     print("You get the mail")
 
-chore1 = threading.Thread(target=walk_dog, args=("Snoop,"))   #Use one comma if there is one item
-                                                              #when passing an argument
+chore1 = threading.Thread(target=walk_dog, args=("Snoop,"))   #Use a comma even if there is only 
+                                                              #one argument to pass 
 chore1.start()
 
 chore2 = threading.Thread(target=take_out_trash)
