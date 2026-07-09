@@ -21,7 +21,7 @@ def set_alarm(alarm_time):
 
                 start_time = time.time()
 
-                while pygame.mixer.music.get_busy():            
+                while pygame.mixer.music.get_busy():
                     if time.time() - start_time >= 5:          #The alarm is set to ring 20 seconds
                          pygame.mixer.music.stop()
                          break
@@ -29,12 +29,12 @@ def set_alarm(alarm_time):
                     time.sleep(1)
 
                 is_running = False
-            
+
             time.sleep(1)                      #including time.sleep() cause it will run the commands
                                                #million times and it is dangerous to CPU
-            
+
 if __name__ == "__main__":              #we use this so that the file don't run when it is used for just
-                                        #taking the components of this file 
-                                        
+                                        #taking the components of this file
+
     alarm_time = input("Enter the alarm time (HH:MM:SS): ")
     set_alarm(alarm_time)

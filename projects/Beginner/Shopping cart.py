@@ -9,7 +9,7 @@ menu = {"pizza" : 3.00,
         "lemonade" : 4.25}
 
 cart = []
-total = 0
+total = 0.0
 #nothing to tell
 
 print("----------MENU----------")
@@ -24,10 +24,10 @@ while True:
         break
     elif menu.get(food) is not None:
         cart.append(food)
-       
+
 print("----------YOUR ORDER----------")
 for food in cart:
-    total += menu.get(food)
+    total += menu[food]
     print(food, end=" ")
 
 print()
